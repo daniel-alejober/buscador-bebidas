@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import BebidasProvider from "../context/BebidasProvider";
+import BebidasContext from "../context/BebidasProvider";
 
 const useBebidas = () => {
-  return useContext(BebidasProvider);
+  return useContext(BebidasContext);
 };
 export default useBebidas;
