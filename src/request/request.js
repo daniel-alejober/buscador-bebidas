@@ -11,3 +11,13 @@ export const obtenerCategorias = async () => {
     console.log(error);
   }
 };
+
+export const consultarBebida = async (datos) => {
+  try {
+    const url = `${urlCocktail}filter.php?i=${datos.nombre}&c=${datos.categoria}`;
+    const { data } = await axios(url);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
