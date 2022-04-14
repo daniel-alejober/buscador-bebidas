@@ -21,3 +21,13 @@ export const consultarBebida = async (datos) => {
     console.log(error);
   }
 };
+
+export const recetaApi = async (id) => {
+  try {
+    const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
+    const { data } = await axios(url);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
